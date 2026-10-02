@@ -1,0 +1,17 @@
+
+{
+  "id": "./",
+  "name": "Ayo Ngaji - EduSmart",
+  "short_name": "Ayo Ngaji",
+  "description": "Aplikasi belajar dan mendengarkan audio Ayo Ngaji dari EduSmart.",
+  "lang": "id",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#008F7A",
+  "categories": [
+    "education"
+  ]
+}
