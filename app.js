@@ -651,3 +651,26 @@ function initializeApp() {
 }
 
 initializeApp();
+
+/* ----------------------------------------
+   PENDAFTARAN SERVICE WORKER
+---------------------------------------- */
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./service-worker.js")
+      .then((registration) => {
+        console.log(
+          "Service worker aktif:",
+          registration.scope
+        );
+      })
+      .catch((error) => {
+        console.error(
+          "Service worker gagal didaftarkan:",
+          error
+        );
+      });
+  });
+}
