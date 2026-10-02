@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008F7A">
+
+  <title>Ayo Ngaji</title>
+
+  <meta
+    name="description"
+    content="Ayo Ngaji - Aplikasi belajar mengaji yang dapat digunakan secara offline."
+  >
+
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="icon" href="./assets/icon-192.png">
+</head>
+
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-name">Ayo Ngaji</span>
+        <span class="brand-subtitle">Belajar dengan mudah</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section class="welcome-card" aria-live="polite">
+      <p class="welcome-label">Assalamu'alaikum,</p>
+      <h1 id="participant-name">Sahabat Ayo Ngaji</h1>
+      <p class="welcome-message">
+        Mari lanjutkan perjalanan belajar mengaji.
+      </p>
+    </section>
+
+    <section class="level-section">
+      <div class="section-heading">
+        <h2>Materi Pembelajaran</h2>
+        <p>Pilih level untuk mulai belajar.</p>
+      </div>
+
+      <div id="level-list" class="level-list">
+        <p class="loading-message">Menyiapkan materi...</p>
+      </div>
+    </section>
+
+    <section
+      id="theme-section"
+      class="theme-section"
+      hidden
+    >
+      <div class="section-heading">
+        <h2 id="theme-heading">Daftar Tema</h2>
+        <p>Pilih tema yang ingin dipelajari.</p>
+      </div>
+
+      <div id="theme-list" class="theme-list"></div>
+    </section>
+
+    <section
+      id="audio-section"
+      class="audio-section"
+      hidden
+    >
+      <div class="section-heading">
+        <h2 id="audio-heading">Audio Pembelajaran</h2>
+        <p>Unduh seluruh audio tema sebelum mulai memutar.</p>
+      </div>
+
+      <div id="audio-list" class="audio-list"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Ayo Ngaji · EduSmart</p>
+  </footer>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
