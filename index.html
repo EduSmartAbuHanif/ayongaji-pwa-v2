@@ -5,79 +5,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#008F7A">
-
-  <title>Ayo Ngaji</title>
-
-  <meta
-    name="description"
-    content="Ayo Ngaji - Aplikasi belajar mengaji yang dapat digunakan secara offline."
-  >
-
+  <meta name="description" content="Ayo Ngaji Level 1 - Ngaji Interaktif EduSmart, dapat digunakan secara offline.">
+  <title>Ayo Ngaji - Level 1 | EduSmart</title>
   <link rel="manifest" href="./manifest.json">
   <link rel="stylesheet" href="./style.css">
-
-  <link rel="icon" href="./assets/icon-192.png">
 </head>
-
 <body>
   <header class="app-header">
     <div class="header-inner">
       <div class="brand">
-        <span class="brand-name">Ayo Ngaji</span>
-        <span class="brand-subtitle">Belajar dengan mudah</span>
+        <div class="brand-mark" aria-hidden="true">۞</div>
+        <div>
+          <div class="brand-name">Ayo Ngaji</div>
+          <div class="brand-subtitle">Ngaji Interaktif · EduSmart</div>
+        </div>
       </div>
+      <div class="level-badge">Level <strong>1</strong></div>
     </div>
   </header>
 
   <main class="app-main">
-    <section class="welcome-card" aria-live="polite">
+    <section class="welcome-card" aria-label="Sambutan">
+      <div class="welcome-decoration" aria-hidden="true">☾ ✦</div>
       <p class="welcome-label">Assalamu'alaikum,</p>
       <h1 id="participant-name">Sahabat Ayo Ngaji</h1>
-      <p class="welcome-message">
-        Mari lanjutkan perjalanan belajar mengaji.
-      </p>
+      <p class="welcome-message">Mari kita belajar lagi.</p>
+      <p class="welcome-tip">Fokus menyimak bacaan Ustadz dulu ya.</p>
     </section>
 
-    <section class="level-section">
+    <section class="learning-section">
       <div class="section-heading">
-        <h2>Materi Pembelajaran</h2>
-        <p>Pilih level untuk mulai belajar.</p>
+        <div>
+          <p class="eyebrow">Perjalanan belajar</p>
+          <h2>Daftar Tema</h2>
+        </div>
+        <span class="theme-total">20 Tema</span>
       </div>
-
-      <div id="level-list" class="level-list">
-        <p class="loading-message">Menyiapkan materi...</p>
-      </div>
+      <div id="theme-list" class="theme-list" aria-live="polite"></div>
     </section>
 
-    <section
-      id="theme-section"
-      class="theme-section"
-      hidden
-    >
-      <div class="section-heading">
-        <h2 id="theme-heading">Daftar Tema</h2>
-        <p>Pilih tema yang ingin dipelajari.</p>
+    <section id="detail-page" class="detail-page" hidden>
+      <button id="back-button" class="back-button" type="button">
+        <span aria-hidden="true">←</span> Kembali ke Daftar Tema
+      </button>
+      <div class="detail-heading">
+        <p class="eyebrow">Level 1</p>
+        <h2 id="detail-title">Tema 1</h2>
+        <p id="detail-description">Pilih audio untuk menyimak bacaan.</p>
       </div>
-
-      <div id="theme-list" class="theme-list"></div>
-    </section>
-
-    <section
-      id="audio-section"
-      class="audio-section"
-      hidden
-    >
-      <div class="section-heading">
-        <h2 id="audio-heading">Audio Pembelajaran</h2>
-        <p>Unduh seluruh audio tema sebelum mulai memutar.</p>
+      <div id="audio-grid" class="audio-grid"></div>
+      <div id="audio-notice" class="audio-notice" role="status" aria-live="polite">
+        Memeriksa kesiapan audio...
       </div>
-
-      <div id="audio-list" class="audio-list"></div>
     </section>
   </main>
 
   <footer class="app-footer">
     <p>Ayo Ngaji · EduSmart</p>
+    <p>Belajar dengan tenang, bertahap, dan penuh semangat.</p>
   </footer>
 
   <script src="./app.js" defer></script>
